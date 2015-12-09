@@ -4,15 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - watchTipCalc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>tipCalc.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>watchTipCalc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>A12C0EB01C125B1D00A879DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A12C0EC91C15F2D200A879DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

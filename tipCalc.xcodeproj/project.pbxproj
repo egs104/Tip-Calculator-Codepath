@@ -13,7 +13,58 @@
 		A12C0EBC1C125B1D00A879DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12C0EBB1C125B1D00A879DC /* Assets.xcassets */; };
 		A12C0EBF1C125B1D00A879DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12C0EBD1C125B1D00A879DC /* LaunchScreen.storyboard */; };
 		A12C0EC71C1533EC00A879DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C0EC61C1533EC00A879DC /* SettingsViewController.swift */; };
+		A12C0ECE1C15F2D200A879DC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12C0ECC1C15F2D200A879DC /* Interface.storyboard */; };
+		A12C0ED01C15F2D200A879DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12C0ECF1C15F2D200A879DC /* Assets.xcassets */; };
+		A12C0ED71C15F2D300A879DC /* watchTipCalc Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A12C0ED61C15F2D300A879DC /* watchTipCalc Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A12C0EDE1C15F2D300A879DC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C0EDD1C15F2D300A879DC /* InterfaceController.swift */; };
+		A12C0EE01C15F2D300A879DC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C0EDF1C15F2D300A879DC /* ExtensionDelegate.swift */; };
+		A12C0EE21C15F2D300A879DC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C0EE11C15F2D300A879DC /* NotificationController.swift */; };
+		A12C0EE41C15F2D300A879DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12C0EE31C15F2D300A879DC /* Assets.xcassets */; };
+		A12C0EE81C15F2D300A879DC /* watchTipCalc.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A12C0ECA1C15F2D200A879DC /* watchTipCalc.app */; };
+		A14F01641C17D0ED0034DF94 /* TipInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F01621C17CF360034DF94 /* TipInterfaceController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A12C0ED81C15F2D300A879DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12C0EA91C125B1D00A879DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A12C0ED51C15F2D300A879DC;
+			remoteInfo = "watchTipCalc Extension";
+		};
+		A12C0EE61C15F2D300A879DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A12C0EA91C125B1D00A879DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A12C0EC91C15F2D200A879DC;
+			remoteInfo = watchTipCalc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A12C0EEE1C15F2D300A879DC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A12C0ED71C15F2D300A879DC /* watchTipCalc Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A12C0EF01C15F2D300A879DC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A12C0EE81C15F2D300A879DC /* watchTipCalc.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A12C0EB11C125B1D00A879DC /* tipCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +75,29 @@
 		A12C0EBE1C125B1D00A879DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A12C0EC01C125B1D00A879DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12C0EC61C1533EC00A879DC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A12C0ECA1C15F2D200A879DC /* watchTipCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchTipCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12C0ECD1C15F2D200A879DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A12C0ECF1C15F2D200A879DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A12C0ED11C15F2D200A879DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A12C0ED61C15F2D300A879DC /* watchTipCalc Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchTipCalc Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12C0EDC1C15F2D300A879DC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A12C0EDD1C15F2D300A879DC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A12C0EDF1C15F2D300A879DC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A12C0EE11C15F2D300A879DC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A12C0EE31C15F2D300A879DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A12C0EE51C15F2D300A879DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14F01621C17CF360034DF94 /* TipInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipInterfaceController.swift; path = "watchTipCalc Extension/TipInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A12C0EAE1C125B1D00A879DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A12C0ED31C15F2D300A879DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				A12C0EB31C125B1D00A879DC /* tipCalc */,
+				A12C0ECB1C15F2D200A879DC /* watchTipCalc */,
+				A12C0EDA1C15F2D300A879DC /* watchTipCalc Extension */,
 				A12C0EB21C125B1D00A879DC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				A12C0EB11C125B1D00A879DC /* tipCalc.app */,
+				A12C0ECA1C15F2D200A879DC /* watchTipCalc.app */,
+				A12C0ED61C15F2D300A879DC /* watchTipCalc Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +141,38 @@
 			path = tipCalc;
 			sourceTree = "<group>";
 		};
+		A12C0ECB1C15F2D200A879DC /* watchTipCalc */ = {
+			isa = PBXGroup;
+			children = (
+				A12C0ECC1C15F2D200A879DC /* Interface.storyboard */,
+				A12C0ECF1C15F2D200A879DC /* Assets.xcassets */,
+				A12C0ED11C15F2D200A879DC /* Info.plist */,
+			);
+			path = watchTipCalc;
+			sourceTree = "<group>";
+		};
+		A12C0EDA1C15F2D300A879DC /* watchTipCalc Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A14F01621C17CF360034DF94 /* TipInterfaceController.swift */,
+				A12C0EDD1C15F2D300A879DC /* InterfaceController.swift */,
+				A12C0EDF1C15F2D300A879DC /* ExtensionDelegate.swift */,
+				A12C0EE11C15F2D300A879DC /* NotificationController.swift */,
+				A12C0EE31C15F2D300A879DC /* Assets.xcassets */,
+				A12C0EE51C15F2D300A879DC /* Info.plist */,
+				A12C0EDB1C15F2D300A879DC /* Supporting Files */,
+			);
+			path = "watchTipCalc Extension";
+			sourceTree = "<group>";
+		};
+		A12C0EDB1C15F2D300A879DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A12C0EDC1C15F2D300A879DC /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +183,51 @@
 				A12C0EAD1C125B1D00A879DC /* Sources */,
 				A12C0EAE1C125B1D00A879DC /* Frameworks */,
 				A12C0EAF1C125B1D00A879DC /* Resources */,
+				A12C0EF01C15F2D300A879DC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A12C0EE71C15F2D300A879DC /* PBXTargetDependency */,
 			);
 			name = tipCalc;
 			productName = tipCalc;
 			productReference = A12C0EB11C125B1D00A879DC /* tipCalc.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A12C0EC91C15F2D200A879DC /* watchTipCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A12C0EEF1C15F2D300A879DC /* Build configuration list for PBXNativeTarget "watchTipCalc" */;
+			buildPhases = (
+				A12C0EC81C15F2D200A879DC /* Resources */,
+				A12C0EEE1C15F2D300A879DC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A12C0ED91C15F2D300A879DC /* PBXTargetDependency */,
+			);
+			name = watchTipCalc;
+			productName = watchTipCalc;
+			productReference = A12C0ECA1C15F2D200A879DC /* watchTipCalc.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A12C0ED51C15F2D300A879DC /* watchTipCalc Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A12C0EED1C15F2D300A879DC /* Build configuration list for PBXNativeTarget "watchTipCalc Extension" */;
+			buildPhases = (
+				A12C0ED21C15F2D300A879DC /* Sources */,
+				A12C0ED31C15F2D300A879DC /* Frameworks */,
+				A12C0ED41C15F2D300A879DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchTipCalc Extension";
+			productName = "watchTipCalc Extension";
+			productReference = A12C0ED61C15F2D300A879DC /* watchTipCalc Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +240,12 @@
 				ORGANIZATIONNAME = "Eric Suarez";
 				TargetAttributes = {
 					A12C0EB01C125B1D00A879DC = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					A12C0EC91C15F2D200A879DC = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					A12C0ED51C15F2D300A879DC = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
@@ -116,6 +264,8 @@
 			projectRoot = "";
 			targets = (
 				A12C0EB01C125B1D00A879DC /* tipCalc */,
+				A12C0EC91C15F2D200A879DC /* watchTipCalc */,
+				A12C0ED51C15F2D300A879DC /* watchTipCalc Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +278,23 @@
 				A12C0EBF1C125B1D00A879DC /* LaunchScreen.storyboard in Resources */,
 				A12C0EBC1C125B1D00A879DC /* Assets.xcassets in Resources */,
 				A12C0EBA1C125B1D00A879DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A12C0EC81C15F2D200A879DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12C0ED01C15F2D200A879DC /* Assets.xcassets in Resources */,
+				A12C0ECE1C15F2D200A879DC /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A12C0ED41C15F2D300A879DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12C0EE41C15F2D300A879DC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +311,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A12C0ED21C15F2D300A879DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12C0EE21C15F2D300A879DC /* NotificationController.swift in Sources */,
+				A14F01641C17D0ED0034DF94 /* TipInterfaceController.swift in Sources */,
+				A12C0EE01C15F2D300A879DC /* ExtensionDelegate.swift in Sources */,
+				A12C0EDE1C15F2D300A879DC /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A12C0ED91C15F2D300A879DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A12C0ED51C15F2D300A879DC /* watchTipCalc Extension */;
+			targetProxy = A12C0ED81C15F2D300A879DC /* PBXContainerItemProxy */;
+		};
+		A12C0EE71C15F2D300A879DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A12C0EC91C15F2D200A879DC /* watchTipCalc */;
+			targetProxy = A12C0EE61C15F2D300A879DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A12C0EB81C125B1D00A879DC /* Main.storyboard */ = {
@@ -161,6 +352,14 @@
 				A12C0EBE1C125B1D00A879DC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A12C0ECC1C15F2D200A879DC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A12C0ECD1C15F2D200A879DC /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -271,6 +470,66 @@
 			};
 			name = Release;
 		};
+		A12C0EE91C15F2D300A879DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = watchTipCalc_Extension;
+				INFOPLIST_FILE = watchTipCalc/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.tipCalc.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		A12C0EEA1C15F2D300A879DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = watchTipCalc_Extension;
+				INFOPLIST_FILE = watchTipCalc/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.tipCalc.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		A12C0EEB1C15F2D300A879DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watchTipCalc Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.tipCalc.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		A12C0EEC1C15F2D300A879DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watchTipCalc Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric.tipCalc.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -288,6 +547,24 @@
 			buildConfigurations = (
 				A12C0EC41C125B1D00A879DC /* Debug */,
 				A12C0EC51C125B1D00A879DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A12C0EED1C15F2D300A879DC /* Build configuration list for PBXNativeTarget "watchTipCalc Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A12C0EEB1C15F2D300A879DC /* Debug */,
+				A12C0EEC1C15F2D300A879DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A12C0EEF1C15F2D300A879DC /* Build configuration list for PBXNativeTarget "watchTipCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A12C0EE91C15F2D300A879DC /* Debug */,
+				A12C0EEA1C15F2D300A879DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
