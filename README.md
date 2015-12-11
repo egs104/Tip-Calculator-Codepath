@@ -4,7 +4,7 @@
 
 Submitted by: **Eric Suarez**
 
-Time spent: **2-3** hours spent in total
+Time spent: **4-5** hours spent in total
 
 ## User Stories
 
@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Made a tip calculator for Apple Watch
 
 ## Video Walkthrough 
 
@@ -29,11 +29,17 @@ Here's a walkthrough of implemented user stories:
 
 <img src='codepathDemo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+Owning an apple watch made me want to build a tip calculator watch app, so here is a walkthrough of tipCalc on Apple Watch:
+
+<img src='tipCalcWatchDemo.gif' title='Watch Walkthrough' width='' alt='Watch Walkthrough' />
+
+GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 I struggled with NSUserDefaults and getting it to work correctly, but then I figured it out by following the tips provided by CodePath.
+
+I struggled at first with the watch app, but apple's developer documentation really helped me solve the problems I ran into.
 
 ## License
 
