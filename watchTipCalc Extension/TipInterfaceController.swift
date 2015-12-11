@@ -39,6 +39,8 @@ class TipInterfaceController: WKInterfaceController {
         
         percentLabel.setText("15%")
         
+        tipPercentSegControl.setValue(15)
+        
         tipLabel.setText(String(format: "$%.2f", tipDouble))
         
         totalLabel.setText(String(format: "$%.2f", totalDouble))
