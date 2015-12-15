@@ -10,17 +10,19 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    
+    @IBOutlet weak var defaultTipSegControl: UISegmentedControl!
     @IBOutlet weak var defaultTipValue: UILabel!
     
     let defaults = NSUserDefaults.standardUserDefaults()
     
+    var defaultTipPercentage = Double()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaultTip = Int(defaults.doubleForKey("defaultTipPercentage") * 100)
+        var defaultTipPercentage = Int(defaults.doubleForKey("defaultTipPercentage") * 100)
         
-        defaultTipValue.text = "\(defaultTip)%"
+        defaultTipValue.text = "\(defaultTipPercentage)%"
     
     }
 
@@ -29,29 +31,21 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func setTo18(sender: AnyObject) {
+    @IBAction func changeDefaultTip(sender: AnyObject) {
         
-        defaults.setDouble(0.18, forKey: "defaultTipPercentage")
-        defaultTipValue.text = "18%"
-        defaults.synchronize()
+        var defaultTipPercentages = [0.18, 0.2, 0.22]
         
-    }
-
-    @IBAction func setTo20(sender: AnyObject) {
+        defaultTipPercentage = defaultTipPercentages[defaultTipSegControl.selectedSegmentIndex]
         
-        defaults.setDouble(0.20, forKey: "defaultTipPercentage")
-        defaultTipValue.text = "20%"
+        defaultTipValue.text = "\(defaultTipPercentage * 100)%"
+        
+        defaults.setDouble(defaultTipPercentage, forKey: "defaultTipPercentage")
         defaults.synchronize()
         
     }
     
-    @IBAction func setTo22(sender: AnyObject) {
-        
-        defaults.setDouble(0.22, forKey: "defaultTipPercentage")
-        defaultTipValue.text = "22%"
-        defaults.synchronize()
-        
-    }
+    
+    
     /*
     // MARK: - Navigation
 

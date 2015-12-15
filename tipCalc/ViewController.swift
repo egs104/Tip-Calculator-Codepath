@@ -20,14 +20,39 @@ class ViewController: UIViewController {
     var tipAmount = Double()
     var total = Double()
     
+    let rememberTextEntryTime = NSTimeInterval.init(600)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+//        self.view.backgroundColor = UIColor.greenColor()
+//        
+//        self.billField.alpha = 1.0
+//        self.tipLabel.alpha = 1.0
+//        self.totalLabel.alpha = 1.0
+//        self.tipSegControl.alpha = 1.0
         
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         
+        billField.placeholder = "$0.00"
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        let defaultValues = ["billFieldText":"0", "lastTipTime":NSDate(), "defaultTipPercentage":0.18]
+        
+        defaults.registerDefaults(defaultValues)
+        
+        defaults.synchronize()
+        
+        let activeTimeValue = defaults.valueForKey("lastTipTime") as! NSDate
+        
+        if (activeTimeValue.timeIntervalSinceNow <= rememberTextEntryTime) {
+            billField.text = defaults.valueForKey("billFieldText") as! String
+            onEditingChange(billField)
+            
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -55,6 +80,13 @@ class ViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         print("view will disappear")
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaults.setValue(billField.text, forKey: "billFieldText")
+        defaults.setValue(NSDate(), forKey: "lastTipTime")
+        defaults.synchronize()
+        
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -72,15 +104,19 @@ class ViewController: UIViewController {
         
         tipPercentage = tipPercentages[tipSegControl.selectedSegmentIndex]
         
-        billAmount = Double(billField.text!)!
-        tipAmount = billAmount * tipPercentage
-        total = billAmount + tipAmount
+        if (billField.text != "") {
         
-        tipLabel.text = "$\(tipAmount)"
-        totalLabel.text = "$\(total)"
+            billAmount = Double(billField.text!)!
+            tipAmount = billAmount * tipPercentage
+            total = billAmount + tipAmount
         
-        tipLabel.text = String(format: "$%.2f", tipAmount)
-        totalLabel.text = String(format: "$%.2f", total)
+            tipLabel.text = "$\(tipAmount)"
+            totalLabel.text = "$\(total)"
+        
+            tipLabel.text = String(format: "$%.2f", tipAmount)
+            totalLabel.text = String(format: "$%.2f", total)
+            
+        }
         
     }
 
