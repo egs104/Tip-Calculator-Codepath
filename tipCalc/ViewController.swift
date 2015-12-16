@@ -8,19 +8,29 @@
 
 import UIKit
 
+extension Double {
+    func asLocaleCurrency() -> String {
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale.currentLocale()
+        return formatter.stringFromNumber(self)!
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var tipSegControl: UISegmentedControl!
+    @IBOutlet weak var tipSlider: UISlider!
+    @IBOutlet weak var tipPercentLabel: UILabel!
     
     var tipPercentage = Double()
     var billAmount = Double()
     var tipAmount = Double()
     var total = Double()
     
-    let rememberTextEntryTime = NSTimeInterval.init(600)
+    let rememberTextEntryTime = NSTimeInterval.init(600) //600 seconds = 10 min
     
     
     override func viewDidLoad() {
@@ -40,11 +50,17 @@ class ViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        let defaultValues = ["billFieldText":"0", "lastTipTime":NSDate(), "defaultTipPercentage":0.18]
+        let defaultValues = ["billFieldText":"0", "lastTipTime":NSDate()]
+        
+        //"defaultTipPercentage":0.18
         
         defaults.registerDefaults(defaultValues)
         
         defaults.synchronize()
+        
+        tipSlider.value = Float(defaults.doubleForKey("defaultTipPercentage")*100)
+        
+        tipPercentLabel.text = "\(defaults.doubleForKey("defaultTipPercentage")*100)%"
         
         let activeTimeValue = defaults.valueForKey("lastTipTime") as! NSDate
         
@@ -61,13 +77,6 @@ class ViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         tipPercentage = defaults.doubleForKey("defaultTipPercentage")
         
-        if tipPercentage == 0.18 {
-            tipSegControl.selectedSegmentIndex = 0
-        } else if tipPercentage == 0.2 {
-            tipSegControl.selectedSegmentIndex = 1
-        } else if tipPercentage == 0.22 {
-            tipSegControl.selectedSegmentIndex = 2
-        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -100,9 +109,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onEditingChange(sender: AnyObject) {
-        var tipPercentages = [0.18, 0.2, 0.22]
+        //var tipPercentages = [0.18, 0.2, 0.22]
         
-        tipPercentage = tipPercentages[tipSegControl.selectedSegmentIndex]
+        var roundedTipValue = floor(tipSlider.value)
+        
+        tipPercentage = Double(roundedTipValue/100)
         
         if (billField.text != "") {
         
@@ -110,13 +121,27 @@ class ViewController: UIViewController {
             tipAmount = billAmount * tipPercentage
             total = billAmount + tipAmount
         
-            tipLabel.text = "$\(tipAmount)"
-            totalLabel.text = "$\(total)"
+            tipPercentLabel.text = "\(Int(tipSlider.value))%"
+            
+            var formattedTipAmount = String(tipAmount.asLocaleCurrency())
+            var formattedTotal = String(total.asLocaleCurrency())
+            
+            tipLabel.text = formattedTipAmount
+            totalLabel.text = formattedTotal
         
-            tipLabel.text = String(format: "$%.2f", tipAmount)
-            totalLabel.text = String(format: "$%.2f", total)
+//            tipLabel.text = String(format: "%.2f", tipAmount)
+//            totalLabel.text = String(format: "%.2f", total)
             
         }
+        
+    }
+    
+    
+    @IBAction func sliderDidChange(sender: AnyObject) {
+        
+        
+        
+        onEditingChange(billField)
         
     }
 
