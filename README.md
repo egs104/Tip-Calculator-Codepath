@@ -4,7 +4,7 @@
 
 Submitted by: **Eric Suarez**
 
-Time spent: **4-5** hours spent in total
+Time spent: **8-10** hours spent in total
 
 ## User Stories
 
